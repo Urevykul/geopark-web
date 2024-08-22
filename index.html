@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#about">O Geoparku</a></li>
                 <li><a href="#gallery">Galéria</a></li>
+                <li><a href="#quiz">Kvíz</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
@@ -29,6 +30,94 @@
             <img src="geopark1.jpg" alt="Geopark 1">
             <img src="geopark2.jpg" alt="Geopark 2">
             <img src="geopark3.jpg" alt="Geopark 3">
+            <!-- Ďalšie obrázky môžu byť pridané sem -->
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>Kvíz z Geológie a Paleontológie</h2>
+        <div id="quiz-container">
+
+            <div class="quiz-question" data-correct="B">
+                <p>Otázka 1: Aká je hlavná zložka čadiča?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Kremeň</button>
+                <button onclick="checkAnswer(this, 'B')">B) Plagioklas</button>
+                <button onclick="checkAnswer(this, 'C')">C) Biotit</button>
+                <button onclick="checkAnswer(this, 'D')">D) Kalcit</button>
+            </div>
+
+            <div class="quiz-question" data-correct="A">
+                <p>Otázka 2: Ktoré obdobie nasledovalo po triasu?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Jura</button>
+                <button onclick="checkAnswer(this, 'B')">B) Krieda</button>
+                <button onclick="checkAnswer(this, 'C')">C) Perm</button>
+                <button onclick="checkAnswer(this, 'D')">D) Devón</button>
+            </div>
+
+            <div class="quiz-question" data-correct="C">
+                <p>Otázka 3: Čo je amonit?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Fosília ryby</button>
+                <button onclick="checkAnswer(this, 'B')">B) Druh kameňa</button>
+                <button onclick="checkAnswer(this, 'C')">C) Fosília hlavonožca</button>
+                <button onclick="checkAnswer(this, 'D')">D) Druh minerálu</button>
+            </div>
+
+            <div class="quiz-question" data-correct="D">
+                <p>Otázka 4: Aký je hlavný rozdiel medzi metamorfovanými a sedimentárnymi horninami?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Metamorfované sú mladšie</button>
+                <button onclick="checkAnswer(this, 'B')">B) Sedimentárne sú hlbšie v zemi</button>
+                <button onclick="checkAnswer(this, 'C')">C) Sedimentárne majú väčšiu hustotu</button>
+                <button onclick="checkAnswer(this, 'D')">D) Metamorfované vznikli zmenou sedimentárnych alebo magmatických hornín</button>
+            </div>
+
+            <div class="quiz-question" data-correct="A">
+                <p>Otázka 5: Ktorý minerál je najtvrdší podľa Mohsovej stupnice?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Diamant</button>
+                <button onclick="checkAnswer(this, 'B')">B) Korund</button>
+                <button onclick="checkAnswer(this, 'C')">C) Topaz</button>
+                <button onclick="checkAnswer(this, 'D')">D) Kremeň</button>
+            </div>
+
+            <div class="quiz-question" data-correct="B">
+                <p>Otázka 6: Ktorý prvok je najbežnejší v zemskej kôre?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Kyslík</button>
+                <button onclick="checkAnswer(this, 'B')">B) Kremík</button>
+                <button onclick="checkAnswer(this, 'C')">C) Hliník</button>
+                <button onclick="checkAnswer(this, 'D')">D) Železo</button>
+            </div>
+
+            <div class="quiz-question" data-correct="C">
+                <p>Otázka 7: Aký je vedecký názov pre fosílie dreva?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Lignofosília</button>
+                <button onclick="checkAnswer(this, 'B')">B) Arbofosília</button>
+                <button onclick="checkAnswer(this, 'C')">C) Xylofosília</button>
+                <button onclick="checkAnswer(this, 'D')">D) Dendrofosília</button>
+            </div>
+
+            <div class="quiz-question" data-correct="D">
+                <p>Otázka 8: Ktorá z týchto hornín je sedimentárna?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Žula</button>
+                <button onclick="checkAnswer(this, 'B')">B) Bridlica</button>
+                <button onclick="checkAnswer(this, 'C')">C) Gneis</button>
+                <button onclick="checkAnswer(this, 'D')">D) Vápenec</button>
+            </div>
+
+            <div class="quiz-question" data-correct="A">
+                <p>Otázka 9: Ktoré z týchto období patrí medzi najstaršie?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Kambrij</button>
+                <button onclick="checkAnswer(this, 'B')">B) Krieda</button>
+                <button onclick="checkAnswer(this, 'C')">C) Trias</button>
+                <button onclick="checkAnswer(this, 'D')">D) Jura</button>
+            </div>
+
+            <div class="quiz-question" data-correct="C">
+                <p>Otázka 10: Čo je to paleozoikum?</p>
+                <button onclick="checkAnswer(this, 'A')">A) Typ horniny</button>
+                <button onclick="checkAnswer(this, 'B')">B) Typ fosílie</button>
+                <button onclick="checkAnswer(this, 'C')">C) Geologická éra</button>
+                <button onclick="checkAnswer(this, 'D')">D) Minerálna zložka</button>
+            </div>
+
         </div>
     </section>
 
@@ -47,5 +136,27 @@
             <a href="https://twitter.com/zsdablice" target="_blank">Twitter</a>
         </div>
     </footer>
+
+    <script>
+    function checkAnswer(button, answer) {
+        var questionDiv = button.parentElement;
+        var correctAnswer = questionDiv.getAttribute('data-correct');
+
+        if (answer === correctAnswer) {
+            button.classList.add('correct');
+        } else {
+            button.classList.add('incorrect');
+            // Zvýrazni správnu odpoveď, ak bola odpoveď nesprávna
+            questionDiv.querySelector(`button[onclick*="${correctAnswer}"]`).classList.add('correct');
+        }
+
+        // Zablokuj všetky tlačidlá pre túto otázku
+        var buttons = questionDiv.querySelectorAll('button');
+        buttons.forEach(function(btn) {
+            btn.disabled = true;
+        });
+    }
+    </script>
+
 </body>
 </html>

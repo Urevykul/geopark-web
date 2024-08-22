@@ -67,3 +67,46 @@ footer .socials a {
 footer .socials a:hover {
     text-decoration: underline;
 }
+
+/* Štýly pre kvíz */
+#quiz {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 2px solid #0073e6;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-question p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quiz-question button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz-question button:hover {
+    background-color: #005bb5;
+}
+
+.quiz-question button.correct {
+    background-color: #28a745;
+    pointer-events: none;
+}
+
+.quiz-question button.incorrect {
+    background-color: #dc3545;
+    pointer-events: none;
+}
